@@ -1,3 +1,74 @@
 html body {
   margin: 0;
 }
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 15fr 1fr;
+}
+
+.header-img {
+  position: absolute;
+  z-index: -1;
+  grid-column: 1/3;
+  grid-row: 1/1;
+  background-image: url(https://cdn.openart.ai/stable_diffusion/d6c3ac4a53bce8f5d457ece9fd90efcf49ae5db2_2000x2000.webp);
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 1/1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: darkgrey;
+  border-radius: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
+header h1 {
+  font-size: 38px;
+}
+header p {
+  font-size: 24px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2/3;
+  grid-row: 2/2;
+}
+
+main h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.main-text-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-text-box-item {
+  font-size: 24px;
+  flex-grow: 1;
+  height: 500px;
+  width: 50%;
+  padding: 10%;
+}
+
+.main-text-box-item li {
+  list-style-type: none;
+}
+
+footer {
+  display: flex;
+  grid-column: 1/4;
+  grid-row: 3/3;
+}
