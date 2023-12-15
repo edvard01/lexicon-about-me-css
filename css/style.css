@@ -1,11 +1,13 @@
 html body {
   margin: 0;
+  background-color: black;
+  color: white;
 }
 
 body {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 1fr 15fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
 }
 
 .header-img {
@@ -24,7 +26,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: darkgrey;
+  background-color: rgb(255, 96, 96);
   border-radius: 12px;
   padding-left: 20px;
   padding-right: 20px;
@@ -40,35 +42,52 @@ header p {
 
 main {
   display: flex;
-  flex-direction: column;
-  grid-column: 2/3;
+  flex-direction: row;
+  width: 100%;
+  grid-column: 1/4;
   grid-row: 2/2;
 }
 
-main h2 {
-  font-size: 48px;
+.content-box-music {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content-box-vg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content-box-cooking {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content-box-title {
+  width: 100%;
   text-align: center;
 }
 
-.main-text-box {
-  display: flex;
-  flex-direction: row;
-}
-
-.main-text-box-item {
-  font-size: 24px;
-  flex-grow: 1;
-  height: 500px;
+.content-box-text {
   width: 50%;
-  padding: 10%;
-}
-
-.main-text-box-item li {
-  list-style-type: none;
+  height: 100%;
 }
 
 footer {
   display: flex;
+  width: 100%;
   grid-column: 1/4;
   grid-row: 3/3;
 }
